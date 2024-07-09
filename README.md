@@ -33,6 +33,7 @@ python main.py
 - pswd_eval.py - Calculates password entropy and checks against the common password dictionary.
 - pattern_check.py - Recognises and suggests avoiding common password patterns.
 - report.py - Manages scoring and generates reports based on the analysis.
+- 10-million-password-list-top-1000000.txt - Contains a list 10 million common passwords.
 
 ## Example
 Test case: Tr0ub4dor&3
