@@ -5,7 +5,7 @@ A utility for evaluating password strength, detecting weaknesses, and recommendi
 - Length Check: A minimum length of 12 characters has been fixed.
 - Complexity Check: Ensures that the password includes a combination of lowercase letters, uppercase letters, numbers and special characters.
 - Entropy Calculation: Measures the randomness of the password. This helps determine its strength against brute-force attacks.
-- Common Password Dictionary Check: Verifies if the user input password is among the most commonly used passwords as listed in text file ''.
+- Common Password Dictionary Check: Verifies if the user input password is among the most commonly used passwords as listed in text file '10-million-password-list-top-1000000.txt'.
 - Pattern Detection: Recognises and suggests patterns to avoid, including sequential characters and keyboard patterns.
 - Masked Input: Securely prompts users to enter the password without displaying the characters.
 - Scoring System: Assigns a score, maximum 15, based on the checks. Points are deducted for every wekaness found.
