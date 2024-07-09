@@ -34,7 +34,7 @@ python main.py
 - pattern_check.py - Recognises and suggests avoiding common password patterns.
 - report.py - Manages scoring and generates reports based on the analysis.
 
-### Example
+## Example
 Test case: Tr0ub4dor&3
 
 ```bash
