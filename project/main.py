@@ -5,18 +5,17 @@ import pattern_check
 import pswd_eval
 
 def main():
-    #pswd = input("Enter password: ")
-    
+    # Using getpass to securely get user input without echoing
     pswd = getpass.getpass("Enter password: ")
     
     # Masking the password input
     print(f"\nEntered password: {'*' * len(pswd)}")
 
-    # Password Strength
+    # Password Strength Evaluation
     strength_eval.pswd_length(pswd)
     strength_eval.pswd_complexity(pswd)
 
-    # Password Evaluation
+    # Password Entropy and Dictionary Check
     pswd_eval.pswd_entropy(pswd)
     pswd_eval.pswd_dict_check(pswd)
 
