@@ -1,27 +1,27 @@
-import re
-import math
+import re       # For regular expression operations
+import math     # For entropy calculation
 import report
 
 def pswd_entropy(pswd):
-    #global score
+    """Calculate password entropy and update score and recommendations."""
     charset_size = sum(bool(re.search(pattern, pswd)) for pattern in [
-            "[a-z]", "[A-Z]", "[0-9]", "[!@#$%^&*(),.?\":{}|<>]"
-        ])
+        "[a-z]", "[A-Z]", "[0-9]", "[!@#$%^&*(),.?\":{}|<>]"
+    ])
     
     entropy = len(pswd) * math.log2(charset_size) if charset_size > 0 else 0
     
     if entropy <= 16:
-        report.recommend(f"Low entropy should be increased.")
+        report.recommend("Low entropy should be increased.")
         report.score -= 2
     elif entropy <= 20:
         report.pswd_strength("Medium Entropy")
-        report.recommend(f"Medium entropy is good, however it would be better to increase the entropy.")
+        report.recommend("Medium entropy is good, however it would be better to increase the entropy.")
         report.score -= 1
     else:
-        report.pswd_strength(f"Strong entropy")
+        report.pswd_strength("Strong entropy")
 
 def pswd_dict_check(pswd):
-    #global score
+    """Check password against a list of common passwords and update score and recommendations."""
     common_passwords_file = "10-million-password-list-top-1000000.txt"
     try:
         with open(common_passwords_file, "r") as f:
